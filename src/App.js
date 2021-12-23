@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainShow from "./pages/MainShow";
 import CastMember from "./pages/CastMember";
 import axios from "axios";
+import FullCast from "./pages/FullCast";
+import Search from "./pages/Search";
 
 function App() {
   const [show, setShow] = useState([]);
@@ -19,9 +21,11 @@ function App() {
   }, []);
 
   const fetchCast = async () => {
-    const { data: cast} = await axios.get("https://api.tvmaze.com/shows/4/cast")
+    const { data: cast } = await axios.get(
+      "https://api.tvmaze.com/shows/4/cast"
+    );
     setCast(cast);
-  }
+  };
 
   useEffect(() => {
     fetchCast();
@@ -31,13 +35,10 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <MainShow show={show} cast={cast} />
-            }
-          />
+          <Route path="/" element={<MainShow show={show} cast={cast} />} />
           <Route path="/:id" element={<CastMember />} />
+          <Route path="/fullcast" element={<FullCast cast={cast} />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </div>
     </Router>
