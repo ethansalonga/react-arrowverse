@@ -14,7 +14,7 @@ const ShowCard = ({ item }) => {
           <p>Type: {show.type}</p>
           <p>Genre: {show.genres[0]}</p>
           <p>Status: {show.status}</p>
-          <p>{show.summary.replace("<p>","").replace("</p>","")}</p>
+          <p>{show.summary.replace("<p>", "").replace("</p>", "")}</p>
         </div>
       </div>
     </div>

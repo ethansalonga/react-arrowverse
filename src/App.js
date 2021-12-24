@@ -6,6 +6,7 @@ import CastMember from "./pages/CastMember";
 import axios from "axios";
 import FullCast from "./pages/FullCast";
 import Search from "./pages/Search";
+import Episodes from "./pages/Episodes";
 
 function App() {
   const [show, setShow] = useState([]);
@@ -39,6 +40,7 @@ function App() {
           <Route path="/:id" element={<CastMember />} />
           <Route path="/fullcast" element={<FullCast cast={cast} />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/episodes" element={<Episodes />} />
         </Routes>
       </div>
     </Router>

@@ -24,7 +24,14 @@ const MainShow = ({ show, cast }) => {
                   <p>Type: {show.type}</p>
                   <p>Date premiered: {show.premiered}</p>
                   <p>Date ended: {show.ended}</p>
-                  <p className="show__summary">{show.summary?.replace("<p>", "").replace("</p>", "")}</p>
+                  <p className="show__summary">
+                    {show.summary?.replace("<p>", "").replace("</p>", "")}
+                  </p>
+                  <span>
+                    <Link to="/episodes" className="show__episodes">
+                      View episode list
+                    </Link>
+                  </span>
                 </div>
               </div>
             </div>

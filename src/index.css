@@ -43,6 +43,11 @@ figure {
   display: flex;
 }
 
+.skeleton {
+  background-color: rgb(227, 227, 227) !important;
+  margin-bottom: 8px;
+}
+
 /*
 
 NAV
@@ -135,7 +140,17 @@ MAIN SHOW
 
 .show__summary {
   font-size: 18px;
-  margin-top: 24px;
+  margin: 24px 0;
+}
+
+.show__episodes {
+  text-decoration: none;
+  color: #e9e9e9;
+  transition: all 300ms ease;
+}
+
+.show__episodes:hover {
+  color: #40916c;
 }
 
 /*
@@ -194,7 +209,7 @@ CAST MEMBERS
 
 .cast__card--name:hover,
 .full-cast__btn:hover {
-  color: #fff;
+  color: #40916c;
 }
 
 /*
@@ -251,7 +266,7 @@ BIO PAGE
 }
 
 .back__btn:hover {
-  color: #fff;
+  color: #40916c;
 }
 
 /*
@@ -341,4 +356,52 @@ SEARCH
 
 .show-card__info {
   line-height: 1.5;
+}
+
+/*
+
+EPISODES
+
+*/
+
+#episodes {
+  background-color: #081c15;
+  min-height: 100vh;
+}
+
+.episodes__header {
+  color: #e9e9e9;
+  margin-bottom: 12px;
+}
+
+.episode__card {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.episode__card--img {
+  max-width: 300px;
+  height: auto;
+}
+
+.episode__name {
+  font-size: 28px;
+  font-weight: 500;
+  color: #e9e9e9;
+}
+
+.episode__card--info {
+  padding: 0 12px;
+  line-height: 1.5;
+}
+
+.episode__number {
+  color: #e9e9e9;
+  font-size: 20px;
+}
+
+.episode__summary {
+  color: #e9e9e9;
 }
